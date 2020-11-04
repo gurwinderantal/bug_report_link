@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_toolbar().
+ */
+function bug_report_link_toolbar() {
+  $items = [];
+  $items['bug_report'] = [
+    '#type' => 'toolbar_item',
+    '#attached' => [
+      'library' => [
+        'bug_report_link/bug_report_icons',
+      ],
+    ],
+  ];
+  return $items;
+}

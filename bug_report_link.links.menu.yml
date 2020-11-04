@@ -1,0 +1,5 @@
+bug_report_link.settings:
+  title: Bug report settings
+  description: Configure settings for "Report a bug" link
+  route_name: bug_report_link.settings
+  parent: system.admin_reports

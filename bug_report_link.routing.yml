@@ -1,0 +1,7 @@
+bug_report_link.settings:
+  path: /admin/reports/bug-report-link/settings
+  defaults:
+    _form: Drupal\bug_report_link\Form\BugReportSettingsForm
+    _title: Bug report settings
+  requirements:
+    _permission: administer site configuration

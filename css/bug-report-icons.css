@@ -1,0 +1,7 @@
+.toolbar-bar .bug-report-link:before {
+  background-image: url('../icons/bebebe/bug.svg');
+}
+
+.no-svg .toolbar-bar .bug-report-link:before {
+  background-image: url('../icons/bebebe/bug.png');
+}

@@ -1,0 +1,7 @@
+name: Bug report link
+type: module
+description: Provides a "Report a bug" link on the admin toolbar.
+core_version_requirement: ^8 || ^9
+package: Administration
+dependencies:
+  - drupal:toolbar

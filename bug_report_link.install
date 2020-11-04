@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Implements hook_install().
+ */
+function bug_report_link_install() {
+  $url = Url::fromRoute('bug_report_link.settings');
+  \Drupal::messenger()
+    ->addStatus(t('Please set the link to your bug report form <a href="@url">here</a>.', ['@url' => $url->toString()]));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function bug_report_link_uninstall() {
+  // Get the menu link created on install.
+  $config = Drupal::config('bug_report_link.settings');
+  $link_id = $config->get('link_id');
+  if ($link_id) {
+    $bug_report_link = MenuLinkContent::load($link_id);
+    // Delete the link.
+    $bug_report_link->delete();
+  }
+}

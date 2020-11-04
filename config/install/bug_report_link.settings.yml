@@ -1,0 +1,6 @@
+bug_report_form_url: ''
+link_id: null
+dependencies:
+  enforced:
+    module:
+      - bug_report_link
